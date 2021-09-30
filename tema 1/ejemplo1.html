@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    function ejemplo1() {
+      ejemplo = 3;
+      if (ejemplo === 3) {
+        var variable1 = 1;
+        let variable2 = 2;
+      }
+      console.log(variable1);
+      console.log(variable2);
+    }
+    //ejemplo1();      Llamada a la funcion ejemplo1
+
+    function ejemplo2() {
+      let edad = 23, nueva_edad, incremento = 4;
+      const nombre = "Rosa García";
+      console.log(typeof incremento === "number");
+      nueva_edad = edad + incremento;
+      console.log(nombre + " tras " + incremento + " años tendrá " + nueva_edad);
+    }
+    //ejemplo2();
+
+    function ejemplo3() {
+      let arr = ["1", "10", "100", "1000"];
+      for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+        console.log(i);
+      }
+    }
+    //ejemplo3();
+
+    function ejemplo4() {
+      let respuesta;
+      respuesta = confirm("¿Desea cancelar la suscripción?");
+      console.log("Usted ha constestado que " + respuesta);
+    }
+    // ejemplo4();
+
+    //abre un cuadro de dialogo con el valor inicial Valencia
+    function ejemplo5() {
+      let provincia;
+      provincia = prompt("Introduzca la provincia ", "Valencia");
+      console.log("Usted ha introducido la siguiente información " + provincia);
+      console.log("Operación realizada con éxito");
+    }
+    //ejemplo5();
+
+    function ejemplo6() {
+      var dividendo = prompt("Introduce el dividendo");
+      var divisor = prompt("Introduce el divisor");
+      var resultado;
+      divisor != 0 ? resultado = dividendo / divisor :
+        console.log("No es posible la división por cero");
+      console.log("El resultado es: " + resultado);
+    }
+    // ejemplo6();
+
+    function ejemplo7() {
+      let a = 4, b = 5, c = "5";
+      console.log("El resultado de la expresión 'a==c' es igual a " + (a == c));
+      console.log("El resultado de la expresión 'a===c' es igual a " + (a === c));
+      console.log("El resultado de la expresión 'a!=c' es igual a " + (a != c));
+      console.log("El resultado de la expresión 'a!==c' es igual a " + (a !== c));
+      console.log("El resultado de la expresión 'a==b' es igual a " + (a == b));
+      console.log("El resultado de la expresión 'a!=b' es igual a " + (a != b));
+      console.log("El resultado de la expresión 'a>'b es igual a " + (a > b));
+      console.log("El resultado de la expresión 'a<b' es igual a " + (a < b));
+    }
+    ejemplo7();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
