@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="salida"></div>
+  <script>
+    //Realizar programa donde el usuario introduce 2 numeros y el ordenador responde sacando por pantalla la resta de ambos numeros
+    let num1, num2;
+    num1 = window.prompt("Introduce 1º valor a la resta");
+    num2 = window.prompt("Introduce 2º valor de la resta");
+    let resultado = num1 - num2;
+    console.log("El resultado de la resta es " + resultado);
+    document.getElementById("salida").innerHTML = ('la resta es  ') + resultado;
+
+  </script>
+</body>
+
+</html>

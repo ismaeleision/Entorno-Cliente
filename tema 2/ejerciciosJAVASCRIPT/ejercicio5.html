@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var marca, modelo;
+    var descuento = 0;
+
+    marca = prompt("Introduce marca del vehiculo");
+    modelo = prompt("Introduce el modelo del vehiculo");
+
+    document.write("El vehiculo es un " + marca + " " + modelo);
+    console.log("El vehiculo es un " + marca + " " + modelo);
+
+    if (marca.toLowerCase == "ford" && modelo.toLowerCase == "fiesta") {
+      descuento = 5;
+    } else if (marca.toLowerCase == "ford" && modelo.toLowerCase == "focus") {
+      descuento = 10;
+    }
+
+    document.write("Dispones de un " + descuento + "% de descuento");
+    console.log("Dispones de un " + descuento + "% descuento");
+  </script>
+
+</body>
+
+</html>
