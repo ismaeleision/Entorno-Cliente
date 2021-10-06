@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    /**
+     * Numeros multiplos de 5 desde el 1 al numero 100
+     * Realizado con el bucle while
+     */
+
+    //defino la variable numero
+    var numero = 1;
+
+    document.write("Los numeros del 1 al 100 multiplo de 5 son : ")
+    //es un bucle que da vueltas mientras el numero sea menor o igual a 100
+    while (numero <= 100) {
+
+      //Si el resultado de dividir el numero a 5 es 0 entonces es multiplo de 5
+      if (numero % 5 == 0) {
+        document.write(numero + " ");
+      }
+      numero++;
+    }
+  </script>
+</body>
+
+</html>

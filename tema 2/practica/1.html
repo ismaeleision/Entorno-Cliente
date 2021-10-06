@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    /**
+     *Cree dos variables numéricas y asigneles un valor entero
+     *Realice un codigo que compruebe cual es el mayor 
+    */
+
+
+    //Math.floor convierte a int un float
+    //Math.random saca un float aleatorio entre 0 y 1
+    //Al multiplicarlo por 100 amplia el rango del numero obtenido de 0 a 100
+    var num1 = Math.floor(Math.random() * 100);
+    document.write("El numero 1 es " + num1 + "<br>");
+
+    var num2 = Math.floor(Math.random() * 100);
+    document.write("El numero 2 es " + num2 + "<br>");
+
+    if (num1 < num2) {
+      document.write("Num2 mayor que Num1");
+    } else if (num1 > num2) {
+      document.write("Num1 es mayor que Num2");
+    } else if (num1 == num2) {
+      document.write("Num1 y Num2 son iguales");
+    } else {
+      document.write("Patata");
+    }
+  </script>
+
+</body>
+
+</html>

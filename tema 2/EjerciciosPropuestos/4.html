@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var origen = prompt("Introduce el lugar de origen");
+    var destino = prompt("Introduce lugar de destino");
+    var descuento;
+    if (origen.toLowerCase() == "palma" && destino.toLowerCase() == "barcelona") {
+      descuento = 5;
+    } else if (origen.toLowerCase() == "palma" && destino.toLowerCase() == "madrid") {
+      descuento = 10;
+    } else if (origen.toLowerCase() == "palma" && destino.toLowerCase() == "valencia") {
+      descuento = 15;
+    } else {
+      descuento = 0;
+    }
+
+    document.write("Tu descuento correspondiente es " + descuento);
+  </script>
+</body>
+
+</html>
