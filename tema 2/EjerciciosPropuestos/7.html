@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="central"></p>
+  <script type="text/javascript">
+
+    //Pedir 2 numeros del 1 al 10 y hacer una tabla de multiplicar del num1 con profundidad num2
+
+    var num1 = prompt("Introduce el primer numero");
+    var num2 = prompt("Introduce el segundo numero");
+    var resultado = 0;
+
+    let i, j;
+    let x = "<table border=1>";
+    for (let i = 1; i <= parseInt(num2); i++) {
+      x = x + "<tr>";
+
+      resultado = parseInt(num1) * i;
+
+      x = x + "<td>" + num1 + " X " + i + "</td><td> = </td><td>" + resultado + " </td>";
+
+      x = x + "</tr>";
+    }
+    x = x + "</table>";
+    document.getElementById("central").innerHTML = x;
+
+
+
+  </script>
+</body>
+
+</html>
