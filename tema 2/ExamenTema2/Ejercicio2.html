@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+    Realizar un script para la tienda de electrodomésticos "Tien 21 Técnica Baria" 
+de Cuevas del Almanzora en la que se aplica un descuento del 12% para las compras que 
+incluyan más de 8 artículos iguales cuyo precio sea superior a 55€. El script debe primero 
+comprobar y luego calcular la cantidad a pagar sabiendo el número de artículos y el precio 
+de cada uno, así como del descuento total aplicado en €.
+Por ejemplo, si compras 20 artículos de 10 euros se descuenta un 12% del total pagarías 
+20x10 - 20x10x0.12 = 176€
+-->
+
+  <script type="text/javascript">
+    //pido por pantalla el precio y la cantidad
+    var precio_objeto = prompt("¿Cuanto cuesta la unidad de lo que has comprado?");
+    var cantidad_objeto = prompt("¿Cuantos has comprado?");
+
+    //calculo el monto de la compra
+    var precio_total = precio_objeto * cantidad_objeto;
+
+    //inicializo a 0 la variable descuento
+    var descuento = 0;
+
+    //Si compras 8 o mas objetos y el monto es superior a 55 entonces se le aplica un descuento del 12%
+    if (cantidad_objeto >= 8 && precio_total > 55) {
+      descuento = 0.12;
+
+      //si no se cumplen las condiciones nanai 
+    } else {
+      descuento = 0;
+    }
+
+    //el precio lo actualizo con el descuento que le corresponde
+    precio_total -= precio_total * descuento;
+    document.write("Tu compra te va a costar " + precio_total + "$");
+  </script>
+</body>
+
+</html>

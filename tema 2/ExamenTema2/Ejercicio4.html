@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+   Realizar el siguiente juego para el casino de Vera:
+• Se quiere programar un juego de dado para la web del casino de Vera
+• El jugador comienza siempre con 50€ para poder apostar
+• El jugador decide el número que quiere apostar (del 1 al 6), y la cantidad a apostar 
+en €.
+• Se “lanza” el dado (asignación random de 1 al 6)
+• Si el jugador acierta el número, gana el doble de lo que ha apostado, en caso 
+contrario pierde lo que ha apostado.
+• El juego finaliza cuando el usuario llega a 0€ o a 200
+ -->
+  <script type="text/javascript">
+    //jugador empieza con 50
+    var jugador = 50;
+
+    //inicializo variables vacias que necesitare despues
+    var dado, apuesta, adivinacion;
+
+    //da vueltas mientras que jugador sea distinto de 0 y que jugador sea igual o mayor a 200
+    do {
+
+      //pide por pantalla cuanto dinero quieres apostar
+      apuesta = prompt("Cuanto quieres apostar");
+
+    //si la apuesta es superior al dinero que tienes salta una alerta
+      if (apuesta > jugador) {
+        console.log("No puedes apostar mas dinero, tienes "+jugador);
+
+        //si la apuesta es igual o inferior al dinero que tienes entonces te deja jugar
+      } else if (apuesta <= jugador) {
+
+        //1º se retira del jugador el dinero que ha apostado
+        jugador -= apuesta;
+
+        //2º pide por pantalla que adivine lo que va a salir en el dado
+        adivinacion = prompt("Introduce a que numero entre el 1 al 6 quieres apostar");
+        
+        //numero entero aleatorio entre 1 y 6
+        dado = Math.floor((Math.random() * 5) + 1);
+       
+       //si gana la apuesta entonces le da el doble de lo que ha apostado
+        if (adivinacion == dado) {
+          console.log("Has ganado la apuesta");
+          jugador += (apuesta * 2);
+
+        //si pierde se le avisa amablemente
+        } else if (adivinacion != dado) {
+          console.log("Has perdido la apuesta");
+        }
+
+      } else {
+        document.write("ERROR 404: not found 1 link mega 100% real no fake")
+      }
+
+    } while (jugador != 0 || jugador >= 200);
+
+    document.write("Has terminado con " + jugador + "$");
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+Realizar el siguiente un juego para adivinar un número elegido de forma 
+aleatoria:
+• Un número entre 0 y 100, y lo elijará la máquina mediante una función random de 
+la librería Math: ej: Math.random
+• El usuario debe adivinarlo con pistas de “El número es Mayor” o “El número es 
+Menor” en un determinado número de intentos, por ejemplo 6 intentos
+  -->
+  <script type="text/javascript">
+
+    //funcion que genera un numero entero entre 0 y el numero que le pasemos
+    function generarRandom(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    //numero al crearse llama a la funcion generarRandom
+    var numero = generarRandom(100);
+
+    //inicializo la variable que va a manipular el jugador
+    var num_jugador;
+    var intentos = 0;
+
+    //uso el console.log porque al ejecutar un bucle no sale en pantalla la advertencia
+    //da vueltas mientras que los dos numeros no coincidan y los intentos sean menores a 6
+    do {
+      //si el numero introducido es mayor al numero secreto
+      if (num_jugador > numero) {
+        console.log(num_jugador + " es mayor que el numero secreto");
+
+        //si el numero introducido es menor al numero secreto
+      } else if (num_jugador < numero) {
+        console.log(num_jugador + " es menor que el numero secreto");
+      }
+
+      //pide por pantalla un numero
+      num_jugador = prompt("Adivina el numero secreto");
+
+      //cada vuelta que da suma 1 al numero de intentos
+      intentos++;
+    } while ((num_jugador != numero) && (intentos < 6))
+
+
+    //si los dos numero son iguales
+    if (num_jugador == numero) {
+      console.log("Has acertado el numero");
+    } else {
+      console.log("Has perdido");
+    }
+    //Imprime al terminar el programa los intentos realizados
+    document.write("Se termino el juego con " + intentos + " intentos");
+  </script>
+</body>
+
+</html>

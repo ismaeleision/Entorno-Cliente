@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!--Realizar un script en JavaScript que pida un numero y diga si es par o impar-->
+  <script type="text/javascript">
+    //Pide por pantalla un dato (idealmente un numero) y lo introduce a la variable numero
+    var numero = prompt("Introduce un numero");
+
+    //si numero es par entoces imprime en la pantalla el mensaje
+    if (numero % 2 == 0) {
+      document.write(numero + " es par");
+      //si no el
+    } else if (numero % 2 != 0) {
+      document.write(numero + " es impar");
+      //es un intento de depurador pero al meter letras coge su valor ASCII
+    } else {
+      document.write("No has introducido un numero");
+    }
+
+  </script>
+</body>
+
+</html>
