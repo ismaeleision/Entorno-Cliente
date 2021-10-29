@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+
+  //Inicializo las variables
+    var intervalo;
+
+    //Asi se inicia un array o tambien var array = [];
+    var array = new Array();
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+    //Pido por pantalla los numeros de un dni para calcular su letra
+    function pedirPantalla() {
+      var num = prompt("Introduzca los numeros de su dni");
+      if (num != "-1") {
+        var letra = letras[num % 23];
+        array.push(letra);
+      }
+      //Si introduce -1 detiene el intervalo y muestra las letras que se han ido guardando en el array
+      else {
+        detenerIntervalos();
+        mostrarContenido();
+      }
+    }
+
+    //Inicia un bucle a intervalos ejecutando la funcion pedirPantalla
+    function intervalos() {
+      intervalo = window.setInterval(pedirPantalla, 10000);
+    }
+
+    //Detiene la ejecucion a intervalos
+    function detenerIntervalos() {
+      clearInterval(intervalo);
+    }
+
+    //muestra el contenido de un array convertido a string unido a un espacio
+    //join funciona como el implode
+    function mostrarContenido() {
+      document.write(array.join(" "));
+    }
+  </script>
+</head>
+
+<!--on load sirve para conforme se carga el body ejecutar el comando-->
+<body onload="intervalos();">
+
+</body>
+
+</html>

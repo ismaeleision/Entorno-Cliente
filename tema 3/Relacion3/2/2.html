@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    var intervalos;
+    var ejecucion = false;
+
+    //Ejecuta por intervalos un comando pero solo lo ejecuta una vez
+    function intervalos() {
+      intervalo = window.setTimeout(mostrarFecha, 20000);
+    }
+
+    //tiene una comprobacion que si es falso imprime el contenido y lo convierte a true para no imprimir mas veces
+    function mostrarFecha() {
+      if (ejecucion === false) {
+        let now = new Date();
+        console.log(now);
+        ejecucion = true;
+      }
+    }
+  </script>
+</head>
+
+<body onload="intervalos()">
+
+</body>
+
+</html>
