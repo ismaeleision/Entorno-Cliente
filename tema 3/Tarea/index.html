@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    var ventana1;
+    var ventana2;
+    var ventana3;
+    var ventana4;
+    var ventana5;
+    var ventana6;
+    var ventana7;
+    var ventana8;
+
+
+    function iniciar() {
+      document.getElementById("Ejercicio1").onclick = abrirVentana(1);
+      document.getElementById("Ejercicio2").onclick = abrirVentana(2);
+      document.getElementById("Ejercicio3").onclick = abrirVentana(3);
+      document.getElementById("Ejercicio4").onclick = abrirVentana(4);
+      document.getElementById("Ejercicio5").onclick = abrirVentana(5);
+      document.getElementById("Ejercicio6").onclick = abrirVentana(6);
+      document.getElementById("Ejercicio7").onclick = abrirVentana(7);
+      document.getElementById("Ejercicio8").onclick = abrirVentana(8);
+    }
+
+    function abrirVentana(id) {
+      if (id == 1) {
+        ventana1 = window.open("1/1.html");
+      } else if (id == 2) {
+        ventana2 = window.open("2/2.html");
+      } else if (id == 3) {
+
+      } else if (id == 4) {
+
+      } else if (id == 5) {
+
+      } else if (id == 6) {
+
+      } else if (id == 7) {
+
+      } else if (id == 8) {
+
+      } else {
+        console.log("Hubo un error");
+      }
+    }
+  </script>
+</head>
+
+<body onload="iniciar()">
+  <form>
+    <input type="button" id="Ejercicio1" value="Ejercicio1">
+    <input type="button" id="Ejercicio2" value="Ejercicio2">
+    <input type="button" id="Ejercicio3" value="Ejercicio3">
+    <input type="button" id="Ejercicio4" value="Ejercicio4">
+    <input type="button" id="Ejercicio5" value="Ejercicio5">
+    <input type="button" id="Ejercicio6" value="Ejercicio6">
+    <input type="button" id="Ejercicio7" value="Ejercicio7">
+    <input type="button" id="Ejercicio8" value="Ejercicio8">
+  </form>
+</body>
+
+</html>
