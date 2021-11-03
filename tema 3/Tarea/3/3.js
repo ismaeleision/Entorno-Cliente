@@ -1,9 +1,11 @@
 function formulario() {
   let zodiaco;
+  //pedimos por pantalla su fecha de nacimiento y se guarda en variables
   let dia = prompt('Introduce tu dia de nacimiento');
   let mes = prompt('Introduce el mes (en letras) en el que naciste');
   let año = prompt('Introduce el años en el que naciste');
 
+  //si el mes en minuscula coincide con el dado y el dia del rango del horoscopo
   if (mes.toLowerCase() == 'enero') {
     if (dia <= 20) {
       zodiaco = 'capricornio';
@@ -26,23 +28,23 @@ function formulario() {
     if (dia <= 20) {
       zodiaco = 'aries';
     } else {
-      zodiaco = 'taurus';
+      zodiaco = 'tauro';
     }
   } else if (mes.toLowerCase() == 'mayo') {
     if (dia <= 20) {
-      zodiaco = 'taurus';
+      zodiaco = 'tauro';
     } else {
-      zodiaco = 'gemini';
+      zodiaco = 'geminis';
     }
   } else if (mes.toLowerCase() == 'junio') {
     if (dia <= 21) {
-      zodiaco = 'gemini';
+      zodiaco = 'geminis';
     } else {
       zodiaco = 'cancer';
     }
   } else if (mes.toLowerCase() == 'julio') {
     if (dia <= 22) {
-      zodiaco = 'camcer';
+      zodiaco = 'cancer';
     } else {
       zodiaco = 'leo';
     }
@@ -62,11 +64,11 @@ function formulario() {
     if (dia <= 22) {
       zodiaco = 'libra';
     } else {
-      zodiaco = 'escorpio';
+      zodiaco = 'escorpion';
     }
   } else if (mes.toLowerCase() == 'noviembre') {
     if (dia <= 22) {
-      zodiaco = 'escorpio';
+      zodiaco = 'escorpion';
     } else {
       zodiaco = 'sagitario';
     }
@@ -78,5 +80,7 @@ function formulario() {
     }
   }
 
-  return "https://es.wikipedia.org/wiki/"+zodiaco+"_(constelación)";
+  //manda al iframe el src que le toca
+  document.getElementById('zodiaco').src =
+    'https://www.univision.com/horoscopos/' + zodiaco;
 }

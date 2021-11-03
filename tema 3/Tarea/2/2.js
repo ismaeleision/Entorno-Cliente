@@ -1,10 +1,13 @@
 function fecha() {
+  //guardo en tiempo la fecha actual
   let tiempo = new Date();
+  //se escribe el dia y el año conforme a la variable tiempo :: para el mes se llama a otra funcion
   document.write(
     tiempo.getDate() + ' de ' + mesLetras() + ' de ' + tiempo.getFullYear()
   );
 }
 
+//Segun el numero devuelme el mes en letra que corresponde
 function mesLetras() {
   let tiempo = new Date();
   if (tiempo.getMonth() == 1) {
