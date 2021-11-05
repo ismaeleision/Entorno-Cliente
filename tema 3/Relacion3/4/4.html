@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    function primos(numero) {
+      //Si un numero es divisible solo entre si mismo y entre  es primo
+      let cont = 0;
+      //Me recorro desde numero a  1
+      for (let i = numero; i > 1; i--) {
+        //si el resto de numero e i es 0 sumo 1 al contador
+        if (numero % i == 0) {
+          cont++;
+        }
+      }
+      //Si el contador es 2 es primo
+      if (cont == 2) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function palindramo(numero) {
+      //si un numero se lee igual en ambas direcciones es palindramo
+      numero = numero.toString();
+      let numReves = numero.split("").reverse().join("");
+      if (numero == numReves) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    let numeros = new Array();
+    let compPrimo;
+    let compPalindromo;
+    for (let i = 0; i <= 100000; i++) {
+      if ((primos(i) == true) && (palindramo(i) == true)) {
+        numeros.push(i);
+      }
+    }
+    document.write(numeros);
+  </script>
+</head>
+
+<body>
+  <p>Los numeros Primos y Palindromos entre si son</p>
+  <div id="caja">
+
+  </div>
+</body>
+
+</html>

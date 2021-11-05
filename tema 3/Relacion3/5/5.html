@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let array = new Array();
+    let texto = prompt("Introduce  nombre:apellidos:telefono:email:codigoPostal");
+    let arrayTexto = texto.split(":");
+    let codigoPostal = arrayTexto[4];
+    let apellidos = arrayTexto[1];
+    let email = arrayTexto[3];
+    let dominio = email.split("@")[1];
+    array.push(codigoPostal, apellidos, email, dominio);
+    document.write(array);
+  </script>
+</body>
+
+</html>
