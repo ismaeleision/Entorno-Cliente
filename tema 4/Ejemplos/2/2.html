@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var palabras = new Array('botella', 'zeta', 'androide', 'minuto');
+    palabras.sort();
+    document.write("<table style='border: 1px black solid;'>");
+    for (let i = 0; i < palabras.length; i++) {
+      document.write("<tr><td>" + palabras[i] + "</td></tr>");
+    }
+    document.write('</table>');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var nombres = new Array();
+    var nom1 = prompt("Introduce el nombre 1");
+    nombres.push(nom1)
+    var nom2 = prompt("Introduce el nombre 2");
+    nombres.push(nom2);
+    var nom3 = prompt("Introduce el nombre 3");
+    nombres.push(nom3);
+
+    document.write("<table style='border: 1px black solid;'>");
+    for (let i = 0; i < nombres.length; i++) {
+      document.write("<tr><td>" + nombres[i] + "</td></tr>");
+    }
+
+  </script>
+</body>
+
+</html>
