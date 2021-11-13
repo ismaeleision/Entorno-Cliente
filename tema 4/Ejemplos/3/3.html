@@ -6,15 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script type="text/javascript">
+    function manipularArray(form) {
+      //Del conjunto de datos que pasa el form me quedo con el valor de  input name="texo"
+      var palabras = form.texto.value
+      //Separo el string en array indicando el separador de las palabras
+      var palabra = palabras.split(" ");
+      //primero es la primera posicion del array
+      var primero = palabra[0];
+      //ultimo es la la longitud del array -1
+      var ultimo = palabra[palabra.length - 1];
+
+      var cantidad = palabra.length;
+      //llama a la funcion ordenarArray
+      var ordenado = ordenarArray(palabra);
+      document.write('La primera palabra puesta es ' + primero + "<br>");
+      document.write('La ultima palabra es ' + ultimo + "<br>");
+      document.write('Se han introducido ' + cantidad + "<br>");
+      document.write('<table>');
+      document.write("<tr>");
+      //Imprime el array en una tabla
+      for (let i = 0; i < palabra.length; i++) {
+        document.write("<td>" + palabra[i] + "</td>");
+      }
+      document.write("</tr></table>");
+    }
+
+    //Ordena el array alfabeticamente
+    function ordenarArray(array) {
+      return array.sort();
+    }
+  </script>
 </head>
 
 <body>
   <h1>Manipular Arrays</h1>
   <p>Introduce algunas palabras</p>
-  <form action="manipular_array.php" method="post">
-    <textarea name="palabra"></textarea>
-    <input type="submit" name="enviar" value="ENVIAR" onclick="abrirVentana()">
+  <form action="" method="get" name="formulario">
+    <input type="text" name="texto">
+    <input type="submit" value="ENVIAR" onclick="manipularArray(this.form)">
   </form>
+
 </body>
 
 </html>
