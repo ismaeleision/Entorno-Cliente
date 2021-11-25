@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<!--Arrays 12) Crear programa con dos Arrays, el primero llamado DatosIniciales con 10 números 
+entre el 0 y el 50 elegidos al azar. El segundo Array se llama DatosFinales, y se declara con 10 
+posibles valores. 
+A través de una función, se rellena el Array DatosFinales con los números mayores de 25 del 
+Array DatosIniciales
+-->
+
+<body>
+  <script>
+    //genera numeros aleatorios de 0 a 50
+    function generarRandom() {
+      return Math.floor(Math.random() * 51);
+    }
+    //devuelve un array de 10 numeros aleatorios
+    function rellenarArrayInicial() {
+      let array = [];
+      for (let i = 0; i < 10; i++) {
+        array.push(generarRandom());
+      }
+      return array;
+    }
+
+    //Imprime los valores de los arrays
+    function imprimirValores() {
+      document.write('<table class="table"><tr><td>Datos Finales</td>');
+      for (let i = 0; i < DatosFinales.length; i++) {
+        document.write('<td>' + DatosFinales[i] + '</td>');
+      }
+      document.write('</tr></table>');
+      document.write('<table class="table"><tr><td>Datos iniciales');
+      for (let i = 0; i < DatosIniciales.length; i++) {
+        document.write('<td>' + DatosIniciales[i] + '</td>');
+      }
+      document.write('</tr></table>');
+    }
+    //Datos finales se inicializa con valores dados de la funcion rellenarArray
+    var DatosIniciales = rellenarArrayInicial();
+    //DatosFinales es un array vacio
+    var DatosFinales = [];
+
+    //Se recorre los valores de datosiniciales y si es mayor a 25 lo mete en datosfinales
+    for (let i = 0; i < 10; i++) {
+      if (DatosIniciales[i] > 25) {
+        DatosFinales.push(DatosIniciales[i]);
+      }
+    }
+    //los espacios que quedas de datosfinales hasta 10 lo rellena con x
+    for (let i = DatosFinales.length; i < 10; i++) {
+      DatosFinales.push("x");
+    }
+
+    imprimirValores();
+  </script>
+</body>
+
+</html>
