@@ -6,50 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="text/javascript">
-    var array = [];
-    var diputado1 = new Diputado("Herminio", "Cabezas", 12349, 30, "Verde");
-    array.push(diputado1);
-    var diputado2 = new Diputado("Manolo", "Lopez", 12349, 20, "Azul");
-    array.push(diputado2);
-    var diputado3 = new Diputado("Jacobo", "Sanchez", 12349, 53, "Amarillo");
-    array.push(diputado3);
 
-    document.write(array);
-
-
-    //Constructor de la clase diputado
+  <script>
+    /*Constructor de la clase diputado
     function Diputado(nombre, apellidos, dni, edad, partido) {
-      this.nombre = nombre;
-      this.apellidos = apellidos;
-      this.dni = dni;
-      this.edad = edad;
-      this.partido = partido;
-
-      //GETTERS
-      this.getNombre = document.write(this.nombre);
-      this.getApellidos = document.write(this.apellidos);
-      this.getDNI = document.write(this.dni);
-      this.getEdad = document.write(this.edad);
-      this.getPartido = document.write(this.partido);
-
-      /*SETTERS
-      this.setNombre(nuevoNombre) = this.Diputado.nombre = nuevoNombre;
-      this.setApellidos(nuevoApellidos) = this.Diputado.apellidos = nuevoApellidos;
-      this.setDNI(nuevoDNI) = this.Diputado.dni = nuevoDNI;
-      this.setEdad(nuevoEdad) = this.Diputado.edad = nuevoEdad;
-      this.setPartido(nuevoPartido) = this.Diputado.partido = nuevoPartido;
-*/
-
-      //TOSTRING
-      this.toString = imprimir(this.nombre, this.apellidos, this.dni, this.edad, this.partido);
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.dni = dni;
+    this.edad = edad;
+    this.partido = partido;
+  
+    //GETTERS
+    this.getNombre = document.write(this.nombre);
+    this.getApellidos = document.write(this.apellidos);
+    this.getDNI = document.write(this.dni);
+    this.getEdad = document.write(this.edad);
+    this.getPartido = document.write(this.partido);
+  
+    SETTERS
+    this.setNombre(nuevoNombre) = (this.Diputado.nombre = nuevoNombre);
+    this.setApellidos(nuevoApellidos) = this.Diputado.apellidos = nuevoApellidos;
+    this.setDNI(nuevoDNI) = this.Diputado.dni = nuevoDNI;
+    this.setEdad(nuevoEdad) = this.Diputado.edad = nuevoEdad;
+    this.setPartido(nuevoPartido) = this.Diputado.partido = nuevoPartido;
+  
+  
+    //TOSTRING
+    this.toString = imprimir(this.nombre, this.apellidos, this.dni, this.edad, this.partido);
     }
 
     //Imprime el contenido de la clase diputado
     function imprimir(nombre, apellidos, dni, edad, partido) {
       return document.write("Nombre: " + nombre + " Apellidos: " + apellidos + " DNI: " + dni + " Edad: " + edad + " Partido: " + partido)
     }
-
+*/
 
   </script>
 </head>
@@ -57,5 +47,81 @@
 <body>
 
 </body>
+<script type="text/javascript">
+ 
+
+  class Diputado {
+    constructor(nombre, apellidos, dni, edad, partido) {
+      this.nombre = nombre;
+      this.apellidos = apellidos;
+      this.dni = dni;
+      this.edad = edad;
+      this.partido = partido;
+    }
+
+    //GETTERS
+    get Nombre() {
+      return this.nombre;
+    }
+
+    get Apellidos() {
+      return this.apellidos;
+    }
+
+    get DNI() {
+      return this.dni;
+    }
+
+    get Edad() {
+      return this.edad;
+    }
+
+    get Partido() {
+      return this.partido;
+    }
+
+    //SETTERS
+    set Edad(edad) {
+      this.edad = edad;
+    }
+
+    set Apellidos(apellidos) {
+      this.apellidos = apellidos;
+    }
+
+    set DNI(dni) {
+      this.dni = dni;
+    }
+
+    set Edad(edad) {
+      this.edad = edad;
+    }
+
+    set Partido(partido) {
+      this.partido = partido;
+    }
+
+    //Hay que sobreescribir el toString
+    toString= function toString(){
+      return this.nombre+" "+this.apellidos+" "+this.dni+" "+this.edad+" "+this.partido;
+    }
+
+  }
+
+  var array = [];
+  var diputado1 = new Diputado("Herminio", "Cabezas", 12349, 30, "Verde");
+  array.push(diputado1);
+  var diputado2 = new Diputado("Manolo", "Lopez", 12349, 20, "Azul");
+  array.push(diputado2);
+  var diputado3 = new Diputado("Jacobo", "Sanchez", 12349, 53, "Amarillo");
+  array.push(diputado3);
+
+  document.write("Array sin ordenar-> "+array);
+
+ //Ordena por edad
+  array.sort((a, b) => a.Edad - b.Edad);
+
+  document.write("<br>Array ordenado-> "+array);
+</script>
 
 </html>
