@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div id="texto"></div>
+
+  <script type="text/javascript">
+    //llamamos a la funcion pedir numeros
+    pedirNumeros();
+
+    //Pide 5 numeros por pantalla y llama a la funcion media al terminar
+    function pedirNumeros() {
+      var suma = [];
+      for (let i = 0; i < 5; i++) {
+        numero = prompt("Introduce un numero");
+        suma.push(parseInt(numero));
+      }
+      media(suma);
+    }
+
+    //suma los numeros del array que le pasan, le calcula la media 
+    //y llama a la funcion imprimir para sacarlos por pantalla
+    function media(array) {
+      let lon = array.length;
+      let suma = 0;
+      for (let i = 0; i < lon; i++) {
+        suma += array[i];
+      }
+      media = suma / lon;
+      imprimir(media);
+    }
+
+    function imprimir(suma) {
+      document.getElementById("texto").innerHTML = "La media de los numeros que has introducido es " + suma;
+    }
+
+  </script>
+</body>
+
+</html>

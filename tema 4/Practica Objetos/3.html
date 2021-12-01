@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="texto"></div>
+
+  <script type="text/javascript">
+    pedirNumeros(15);
+    //dado el numero que contenga a pide numeros y los introduce a un array
+    function pedirNumeros(a) {
+      let array = [];
+      for (let i = 0; i < a; i++) {
+        let numero = parseInt(prompt("Introduce un numero"));
+        array.push(numero);
+      }
+      menor(array);
+    }
+
+    function menor(array) {
+      let lon = array.length;
+      let menor = 999;
+      let posicion = 0;
+      for (let i = 0; i < lon; i++) {
+        if (array[i] < menor) {
+          menor = array[i];
+          posicion = (i + 1).toString();
+        } else if (array[i] == menor) {
+          posicion += (",  " + (i + 1).toString());
+        }
+      }
+      imprimir(menor, posicion);
+    }
+
+    function imprimir(menor, posicion) {
+      document.getElementById("texto").innerHTML = "El menor numero introducido a sido " + menor + " siendo su posicion " + posicion;
+    }
+  </script>
+</body>
+
+</html>
