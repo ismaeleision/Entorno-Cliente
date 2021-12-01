@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<form action="7.html" method=post>
+  <input type="text" name="descripcion">
+  <input type="number" name="codigo">
+  <input type="precio" name="precio">
+</form>
+</body>
+<script type="text/javascript">
+  function obj_articulo(descripcion, codigo, precio, iva) {
+    this.descripcion = descripcion;
+    this.codigo = codigo;
+    this.precio = total(precio, iva);
+  }
+
+  function iva(precio, iva) {
+    return precio * iva;
+  }
+
+  function total(precio) {
+    return (precio + iva(precio));
+  }
+</script>
+
+</html>

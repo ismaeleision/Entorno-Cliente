@@ -49,7 +49,6 @@
 </body>
 <script type="text/javascript">
  
-
   class Diputado {
     constructor(nombre, apellidos, dni, edad, partido) {
       this.nombre = nombre;
@@ -81,8 +80,8 @@
     }
 
     //SETTERS
-    set Edad(edad) {
-      this.edad = edad;
+    set Nombre(nombre) {
+      this.nombre = nombre;
     }
 
     set Apellidos(apellidos) {
@@ -101,9 +100,9 @@
       this.partido = partido;
     }
 
-    //Hay que sobreescribir el toString
+    //Hay que sobreescribir el toString llamando a los getters
     toString= function toString(){
-      return this.nombre+" "+this.apellidos+" "+this.dni+" "+this.edad+" "+this.partido;
+      return this.Nombre+" "+this.Apellidos+" "+this.DNI+" "+this.Edad+" "+this.Partido;
     }
 
   }
@@ -117,6 +116,9 @@
   array.push(diputado3);
 
   document.write("Array sin ordenar-> "+array);
+
+  //Setters en uso
+  diputado2.Apellidos="Gonzalo";
 
  //Ordena por edad
   array.sort((a, b) => a.Edad - b.Edad);
