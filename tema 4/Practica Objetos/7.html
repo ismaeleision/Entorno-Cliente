@@ -9,26 +9,43 @@
 </head>
 
 <body>
-<form action="7.html" method=post>
-  <input type="text" name="descripcion">
-  <input type="number" name="codigo">
-  <input type="precio" name="precio">
-</form>
+  <form action="7.html" method=post>
+    <input type="text" name="descripcion">
+    <input type="number" name="codigo">
+    <input type="precio" name="precio">
+  </form>
 </body>
 <script type="text/javascript">
-  function obj_articulo(descripcion, codigo, precio, iva) {
+  function Articulo(descripcion, codigo, precio) {
     this.descripcion = descripcion;
     this.codigo = codigo;
-    this.precio = total(precio, iva);
+    this.precio = precio;
+    this.iva = function (iva) {
+      iva += (iva * 0.21);
+      return iva;
+    }
+
+    this.total = funtion(descuento){
+      descuento = descuento - (descuento * 0.05);
+      return descuento;
+    }
+
+    this.toString = function () {
+      let datos = "<h4>El articulo " + this.codigo + "<i>(" +
+        this.descripcion + ")</i>tiene un precio TOTAL de " +
+        this.total(this.iva(this.precio)) + "€</h4>";
+      datos += "<h2>Precio" + this.precio + "€</h2>";
+      datos += "<h2>Con IVA" + this.iva(this.precio) + " € </h2>";
+      datos += "<h2>TOTAL" + this.total(this.precio) + " €</h2>";
+      document.write(datos);
+    }
   }
 
-  function iva(precio, iva) {
-    return precio * iva;
+  function principal(){
+    var datos=[];
+    var descuento = document.getElementById("")
   }
 
-  function total(precio) {
-    return (precio + iva(precio));
-  }
 </script>
 
 </html>
