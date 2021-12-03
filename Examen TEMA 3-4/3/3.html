@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <!--Div al que van a ir los datos que imprimamos-->
+  <div id="texto"></div>
+  <script type="text/javascript">
+    //Constructor de la clase con sus parametros
+    function Inmueble(direccion, postal, localidad, metros, precio) {
+      this.direccion = direccion;
+      this.postal = postal;
+      this.localidad = localidad;
+      this.metros = metros;
+      this.precio = precio;
+
+      this.toString = imprimeDatos(
+        this.direccion,
+        this.postal,
+        this.localidad,
+        this.metros,
+        this.precio
+      );
+
+      this.descuento = aplicarDescuento(this.precio);
+
+    }
+    //Funcion para imprimir los datos del objeto
+    function imprimeDatos(direccion, postal, localidad, metros, precio) {
+      let string =
+        //Forma el string con los datos del objeto
+        'Direccion ' +
+        direccion +
+        '/ Codigo Postal ' +
+        postal +
+        '/ Localidad ' +
+        localidad +
+        '/ Metros Cuadrados ' +
+        metros +
+        '/ Precio ' +
+        precio;
+      return string;
+    }
+
+    function aplicarDescuento(precio) {
+      if (precio < 10000) {
+        this.precio = precio - (precio * 0.05);
+      } else if (precio > 100000 && precio < 200000) {
+        this.precio = precio - (precio * 0.1);
+      } else {
+        this.precio = precio - (precio * 0.2);
+      }
+    }
+
+
+    //DECLARACION DEL OBJETO
+    var inmueble1 = new Inmueble('Calle del Olmo', '04000', 'Vera', 200, 20000);
+    console.log(inmueble1.toString);
+    console.log(inmueble1.direccion);
+    inmueble1.descuento;
+    console.log(inmueble1.toString);
+
+  </script>
+
+</body>
+
+</html>

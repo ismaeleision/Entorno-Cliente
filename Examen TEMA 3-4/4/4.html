@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <button type="button" class="btn btn-success" onclick="imprimirQuiniela()">Boleto Quiniela</button>
+  <div id="texto"></div>
+
+  <script>
+    //Funcion para generar Aleatorios
+    function generarRandom(max) {
+      return Math.floor(Math.random() * max + 1);
+    }
+
+    //Genera el reintegro que es del 0 al 9
+    function generarReintegro() {
+      return Math.floor(Math.random() * 10);
+    }
+
+    /*
+    Un array de 6 numeros diferentes del 1 al 49,
+    un complementario del 1 al 49
+    y un numero extra del 0 al 9
+    */
+    function generarQuiniela() {
+      //inicializo el array con el contenido numeros para marcar el primer contenido
+      let array = ["Numeros"];
+      //inicializo el objeto date con los datos de ahora
+      let fecha = new Date();
+      //contador para guardar ocurrencias
+      let contador = 0;
+      //genera 7 numeros aleatorios 
+      for (let i = 0; array.length < 7; i++) {
+        //genera un numero aleatorio entre el 1 y el 49
+        let numero = generarRandom(50);
+        contador = 0;
+        //este bucle sirve para comprobar que los numeros guardados no coinciden con el numero generado aleatoriamente
+        for (let j = 0; j < array.length; j++) {
+          if (numero == array[j]) {
+            contador++;
+          }
+        }
+
+        //Si no se han sumado iteraciones se mete el numero en el array
+        if (contador == 0) {
+          array.push(numero);
+        }
+      }
+
+      //Mete el reintegro 
+      array.push("Reintegro: " + generarReintegro());
+      //Mete la fecha que se ha sacado el boleto
+      array.push("Fecha: " + fecha.getDay() + "/" + fecha.getMonth() + "/" + fecha.getFullYear());
+      return array;
+    }
+
+    //----------IMPRIMIR QUINIELA
+    function imprimirQuiniela() {
+      //llama a la funcion generarQuiniela
+      let quiniela = generarQuiniela();
+      //imprime el resultado en el div id=texto
+      document.getElementById("texto").innerHTML = quiniela;
+    }
+
+  </script>
+</body>
+
+</html>
