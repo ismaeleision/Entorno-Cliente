@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    function verPalabras() {
+      var palabras = document.getElementById("cajaTexto").value;
+      var items = document.getElementById("palabras");
+      var web = "";
+      palabras = palabras.split(" ");
+      for (let i = 0; i < palabras.length; i++) {
+        web += "<div><input type='checkbox' id='item'><label>" + palabras[i] + "</label></div>";
+      }
+      items.innerHTML = web;
+      console.log(palabras);
+    }
+
+    function seleccionarItems() {
+      let item = document.getElementById("palabras");
+      let checkear;
+      if (todos.checked == true) {
+        checkear = true;
+      } else {
+        checkear = false;
+      }
+      for (let i = 0; item.length; i++) {
+        item[i].checked = checkear;
+      }
+    }
+
+    window.onload = function () {
+      let verPalabra = document.getElementById("ver");
+      verPalabra.addEventListener("click", verPalabras, false);
+      //Inicio seleccionar Todos
+      var todos = document.getElementById("todos");
+      todos.addEventListener("change", seleccionarItems, false);
+    }
+  </script>
+</head>
+
+<body>
+  <form id="formulario">
+    <textarea id="cajaTexto"></textarea>
+    <input type="checkbox" id="todos" onchange="seleccionarItems()">
+    <label for="todos">Seleccionar Todos</label>
+    <input type="button" id="ver">Enviar
+    <div id="palabras"></div>
+  </form>
+</body>
+
+</html>
