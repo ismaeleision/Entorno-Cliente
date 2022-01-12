@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="contenedor">
+    <h1>Conversor de divisas</h1>
+    <form id="conversor">
+      Cantidad de <input type="number" id="cantidad"> € a
+      <select id="divisa">
+        <option value="1.05" name="dolar">Dolar</option>
+        <option value="0.95" name="libra">Libra</option>
+        <option value="189.87" name="pesoVenezolano">Peso Venezolano</option>
+      </select>
+      <input type="button" value="Convertir" id="convertir">
+    </form>
+    <div id="resultado"></div>
+  </div>
+  <script type="text/javascript">
+    window.onload = function () {
+      let convertir = document.getElementById("convertir").addEventListener("click", convertirDivisa, false);
+    }
+    function convertirDivisa() {
+      let cantidad = document.getElementById("cantidad").value;
+      let divisa = document.getElementById("divisa").value;
+      let convertido = cantidad * divisa;
+      document.getElementById("resultado").innerHTML = convertido;
+    }
+  </script>
+</body>
+
+</html>
