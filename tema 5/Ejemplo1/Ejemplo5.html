@@ -27,7 +27,7 @@
         <input type="password" id="contraseña">
       </div>
       <div>
-        <label for="repite_contraseña"> Repite Contraseña:*</label><br>
+        <label for="repite_contraseña"> Confirmar Contraseña:*</label><br>
         <input type="password" id="repite_contraseña">
       </div>
       <div>
@@ -66,19 +66,20 @@
       <p>Tarjeta:*</p>
       <div class="form-floating">
         <select class="form-select" id="tarjeta">
-          <option selected>-Waiting an enable credit card company-</option>
+          <option selected>-Waiting an available credit card company-</option>
           <option value="visa">Visa</option>
           <option value="master">Mastercard</option>
         </select>
         <label for="tarjeta">Selecciona la tarjeta que poseas</label>
       </div>
-      <div>
-        <input type="checkbox" id="condiciones">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="condiciones">
         <label for="condiciones">Acepto las condiciones de uso de esta web</label>
       </div>
-      <input type="submit" class="btn btn-success" value="Enviar">
+      <input type="submit" class="btn btn-success" value="Enviar" id="enviar">
     </form>
   </div>
+  <script src="Ejemplo5.js"></script>
 </body>
 
 </html>
