@@ -32,11 +32,15 @@
 
   <script type="text/javascript">
     window.onload = function () {
-      let foto1 = document.getElementById("foto1").addEventListener("click", ,false);
-      let foto2 = document.getElementById("foto2").addEventListener("click", ,false);
-      let foto3 = document.getElementById("foto3").addEventListener("click", ,false);
-      let foto4 = document.getElementById("foto4").addEventListener("click", ,false);
-      let foto5 = document.getElementById("foto5").addEventListener("click", ,false);
+      let foto1 = document.getElementById("foto1").addEventListener("click", cambiar, false);
+      let foto2 = document.getElementById("foto2").addEventListener("click", cambiar, false);
+      let foto3 = document.getElementById("foto3").addEventListener("click", cambiar, false);
+      let foto4 = document.getElementById("foto4").addEventListener("click", cambiar, false);
+      let foto5 = document.getElementById("foto5").addEventListener("click", cambiar, false);
+    }
+
+    function cambiar(x, y) {
+      console.log(x, y);
     }
   </script>
 </body>
