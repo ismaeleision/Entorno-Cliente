@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.lienzo {
+      width: 104px;
+      height: 164px;
+      border: 1px black solid;
+      float: left;
+      margin: 5px;
+      padding: 3px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="pantalla">
+    <h1>Mover Imagen</h1>
+    <div class="lienzo" id="foto1"></div>
+    <div class="lienzo" id="foto2"><img src="imagenes/1bastos.png"></div>
+    <div class="lienzo" id="foto3"><img src="imagenes/1copas.png"></div>
+    <div class="lienzo" id="foto4"><img src="imagenes/1espadas.png"></div>
+    <div class="lienzo" id="foto5"></div>
+    <p><br>Haz click para seleccionar la imagen que seas intercambiar</p>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      let foto1 = document.getElementById("foto1").addEventListener("click", ,false);
+      let foto2 = document.getElementById("foto2").addEventListener("click", ,false);
+      let foto3 = document.getElementById("foto3").addEventListener("click", ,false);
+      let foto4 = document.getElementById("foto4").addEventListener("click", ,false);
+      let foto5 = document.getElementById("foto5").addEventListener("click", ,false);
+    }
+  </script>
+</body>
+
+</html>
