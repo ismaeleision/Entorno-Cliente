@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   let nombre2 = document
     .getElementById('nombre')
-    .addEventListener('keyup', comprobacionLetras);
+    .addEventListener('keyup', comprobacionNombre);
 
   //Disparadores del Apellido
   let apellido1 = document
@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
 
   let apellido2 = document
     .getElementById('apellidos')
-    .addEventListener('keyup', comprobacionLetras);
+    .addEventListener('keyup', comprobacionApellidos);
 
   //Disparadores Contraseña
   let con1 = document
@@ -40,7 +40,11 @@ function mayusculas() {
   console.log('zah');
 }
 
-function comprobacionLetras() {}
+function comprobacionNombre() {
+  console.log('zah');
+}
+
+function comprobacionApellidos() {}
 
 function validarContraseña() {}
 
