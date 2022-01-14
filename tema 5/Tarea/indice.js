@@ -1,11 +1,11 @@
 window.addEventListener('load', function () {
   //Disparadores del Nombre
   let nombre1 = document
-    .getElementById('nombre')
+    .getElementById('nom')
     .addEventListener('blur', mayusculas);
 
   let nombre2 = document
-    .getElementById('nombre')
+    .getElementById('nom')
     .addEventListener('keyup', comprobacionNombre);
 
   //Disparadores del Apellido
