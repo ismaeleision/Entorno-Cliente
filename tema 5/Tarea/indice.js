@@ -30,10 +30,10 @@ window.addEventListener('load', function () {
     .getElementById('reContraseña')
     .addEventListener('keyup', validarReContraseña);
 
-  //Aunque bootstrap ya te lo filtre se hace
-  let fecha = document
-    .getElementById('fechaNacimiento')
-    .addEventListener('click', validarFecha);
+  //Disparador Enviar
+  let enviar = document
+    .getElementById('enviar')
+    .addEventListener('click', validarFormulario);
 });
 
 function mayusculasNombre() {
@@ -117,8 +117,6 @@ function validarReContraseña() {
   }
 }
 
-function validarFecha() {
-  console.log('zah');
-  let fecha = document.getElementById('fechaNacimiento').value;
-  console.log(fecha);
+function validarFormulario() {
+  console.log("zah");
 }
