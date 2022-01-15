@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
   //Aunque bootstrap ya te lo filtre se hace
   let fecha = document
     .getElementById('fechaNacimiento')
-    .addEventListener('blur', validarFecha);
+    .addEventListener('click', validarFecha);
 });
 
 function mayusculasNombre() {
@@ -47,7 +47,6 @@ function mayusculasNombre() {
     }
   }
   nombre = nombre.join('');
-  console.log(nombre);
   document.getElementById('nom').value = nombre;
 }
 
@@ -118,4 +117,8 @@ function validarReContraseña() {
   }
 }
 
-function validarFecha() {}
+function validarFecha() {
+  console.log('zah');
+  let fecha = document.getElementById('fechaNacimiento').value;
+  console.log(fecha);
+}
