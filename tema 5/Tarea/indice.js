@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
     .addEventListener('keyup', validarReContraseña);
 
   //Disparador Enviar
-  let enviar = document
+  let env = document
     .getElementById('enviar')
     .addEventListener('click', validarFormulario);
 });
@@ -118,5 +118,5 @@ function validarReContraseña() {
 }
 
 function validarFormulario() {
-  console.log("zah");
+  console.log('zah');
 }
