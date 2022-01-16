@@ -118,5 +118,9 @@ function validarReContraseña() {
 }
 
 function validarFormulario() {
-  console.log('zah');
+  if (document.getElementById('nom').style.borderColor == 'green') {
+    console.log('bien');
+  } else {
+    console.log('mal');
+  }
 }
