@@ -34,6 +34,11 @@ window.addEventListener('load', function () {
   let env = document
     .getElementById('enviar')
     .addEventListener('click', validarFormulario);
+
+  //Disparador Fecha
+  let fecha = document
+    .getElementById('fechaNacimiento')
+    .addEventListener('blur', validarFecha);
 });
 
 function mayusculasNombre() {
@@ -117,10 +122,44 @@ function validarReContraseña() {
   }
 }
 
+/**
+ * Parte el string en array le da la vuelta y lo vuelve a unir para darle formato dia/mes/año
+ * @returns fecha
+ */
+function validarFecha() {
+  let fecha = document.getElementById('fechaNacimiento').value;
+  fecha = fecha.split('-');
+  fecha = fecha.reverse();
+  fecha = fecha.join('-');
+  return fecha;
+}
+
+/**
+ * Si todos los inputs tienen el borde verde y la fecha no est vacia te lleva al travial
+ * sino te pone el foco donde te allas equivocado
+ */
 function validarFormulario() {
   if (document.getElementById('nom').style.borderColor == 'green') {
-    console.log('bien');
+    if (document.getElementById('apellidos').style.borderColor == 'green') {
+      if (document.getElementById('contraseña').style.borderColor == 'green') {
+        if (
+          document.getElementById('reContraseña').style.borderColor == 'green'
+        ) {
+          if (document.getElementById('fechaNacimiento').value != 0) {
+            window.location.replace('travial.html');
+          } else {
+            document.getElementById('fechaNacimiento').focus();
+          }
+        } else {
+          document.getElementById('reContraseña').focus();
+        }
+      } else {
+        document.getElementById('contraseña').focus();
+      }
+    } else {
+      document.getElementById('apellidos').focus();
+    }
   } else {
-    console.log('mal');
+    document.getElementById('nom').focus();
   }
 }
