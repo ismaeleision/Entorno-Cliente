@@ -2,10 +2,19 @@ window.addEventListener('load', function () {
   let añadir = document
     .getElementById('añadir')
     .addEventListener('click', añadirPoblacion);
-  let eliminar = document
-    .getElementById('eliminar')
-    .addEventListener('click', eliminarPoblacion);
 });
+
+document.getElementById('contenedor'),
+  addEventListener('click', async function (e) {
+    //Boton plantarse
+    let botonPlantarse = e.target.closest('button[id=eliminar]');
+    if (botonPlantarse) {
+      let pueblo = document.getElementById('eliminarP').value;
+      document
+        .getElementById('lista')
+        .removeChild(document.getElementById(pueblo));
+    }
+  });
 
 function añadirPoblacion() {
   let poblaciones = document.getElementById('texto').value;
@@ -23,4 +32,9 @@ function añadirPoblacion() {
   }
 }
 
-function eliminarPoblacion() {}
+/*
+function eliminarPoblacion(x) {
+  document.getElementById(x).value = '';
+  console.log(document.getElementById(x).value);
+}
+*/
