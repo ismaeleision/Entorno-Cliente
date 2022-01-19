@@ -14,14 +14,7 @@ function añadirPoblacion() {
   if (poblaciones.length != 0) {
     let li = document.createElement('li');
 
-    //Creo un a para añadirlo a la lista
-    let a = document.createElement('a');
-    a.appendChild(document.createTextNode('X'));
-    a.setAttribute('id', poblaciones);
-    console.log(a);
-
-    li.appendChild(document.createTextNode(poblaciones + a));
-    li.appendChild(document.createTextNode(a));
+    li.appendChild(document.createTextNode(poblaciones));
 
     //Se le pone de id lo mismo que al nombre
     li.setAttribute('id', poblaciones);
