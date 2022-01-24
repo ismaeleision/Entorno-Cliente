@@ -13,11 +13,11 @@
             opacity: 0.8;
             width: 700px;
         }
-        
+
         .clearfix {
             overflow: hidden;
         }
-        
+
         div#finjuego {
             background: red;
             position: absolute;
@@ -26,7 +26,7 @@
             min-height: 100px;
             display: none;
         }
-        
+
         div.celda {
             background: url(imagenes/tablero.png) no-repeat;
             padding: 0;
@@ -37,37 +37,6 @@
         }
     </style>
     <script>
-        /*function Sound(source, volume, loop) {
-            this.source = source;
-            this.volume = volume;
-            this.loop = loop;
-            var son;
-            this.son = son;
-            this.finish = false;
-            this.stop = function () {
-                document.body.removeChild(this.son);
-            }
-            this.start = function () {
-                if (this.finish) return false;
-                this.son = document.createElement("embed");
-                this.son.setAttribute("src", this.source);
-                this.son.setAttribute("hidden", "true");
-                this.son.setAttribute("volume", this.volume);
-                this.son.setAttribute("autostart", "true");
-                this.son.setAttribute("loop", this.loop);
-                document.body.appendChild(this.son);
-            }
-            this.remove = function () {
-                document.body.removeChild(this.son);
-                this.finish = true;
-            }
-            this.init = function (volume, loop) {
-                this.finish = false;
-                this.volume = volume;
-                this.loop = loop;
-            }
-        }*/
-
         function finDeJuego() {
             var ganador = comprobarFilas();
             if (ganador != 0) {
@@ -91,11 +60,11 @@
             }
             return -1;
         }
-        
+
         //Devolvemos 0 si la fila no tiene 4 fichas adyacentes, devolvemos roja si hay 4 rojas adyacentes, y devolvemos amarillas si hay 4 amarillas adyacentes
         function comprobarFilas() {
             var fil = 6;
-            var col = 7;            
+            var col = 7;
             var cont = 0;
             for (var i = 0; i < fil; i++) {
                 var celda1 = document.getElementById(i + "x" + 0);
@@ -119,10 +88,10 @@
             }
             return 0;
         }
-        
+
         function comprobarColumnas() {
             var fil = 6;
-            var col = 7;            
+            var col = 7;
 
             var cont = 0;
             for (var i = 0; i < col; i++) {
@@ -148,9 +117,12 @@
             }
             return 0;
         }
-        
+
         function colocarFicha(celda) {
-            if (ganador != "") {
+            if (ganador == true) {
+                return 0;
+            }
+            if (finDeJuego()) {
                 return 0;
             }
             var col = celda.id[2];
@@ -170,9 +142,7 @@
                 }
                 document.getElementById(idCelda).appendChild(ficha);
             }
-            if (finDeJuego()) {
-                return 0;
-            }
+
         }
 
         function crearTablero() {
@@ -203,7 +173,9 @@
         }
     </script>
 </head>
+
 <body>
     <div id="tablero" class="clearfix"></div>
 </body>
+
 </html>

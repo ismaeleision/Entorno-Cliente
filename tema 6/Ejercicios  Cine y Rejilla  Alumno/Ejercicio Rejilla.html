@@ -5,35 +5,48 @@
     <meta charset="UTF-8">
     <title>Ejercicio rejilla</title>
     <script>
-        function pintarPunto(punto){
+        function pintarPunto(punto) {
             punto.style.background = colorActual;
         }
-		
-		function initPaletaColor(colores){			
-			var paleta = document.getElementById("paleta");
-			for(var i=0; i<colores.length; i++){
-				color =  document.createElement("div");
-				color.className = "color "+colores[i];
-				color.style.backgroundColor = colores[i];
-				color.onclick = function(){
-					colorActual = this.style.backgroundColor;
-				}
-				paleta.appendChild(color);
-			}
-		}
-		
+
+        function initPaletaColor(colores) {
+            var paleta = document.getElementById("paleta");
+            for (var i = 0; i < colores.length; i++) {
+                color = document.createElement("div");
+                color.className = "color " + colores[i];
+                color.style.backgroundColor = colores[i];
+                color.onclick = function () {
+                    colorActual = this.style.backgroundColor;
+                }
+                paleta.appendChild(color);
+            }
+        }
+
         function crearRejilla(fil, col, tampunto) {
             var rejilla = document.getElementById("rejilla");
-			rejilla.innerHTML = "";
-			rejilla.style.width = (fil*tampunto + fil*2) +"px";
-	
+            rejilla.innerHTML = "";
+            var con = 0;
+            if (con > 0) {
+                console.log("segundita vez puto");
+                for (var i = 0; i < fil; i++) {
+                    for (var j = 0; j < col; j++) {
+                        let idPunto = i + "x" + j;
+                        document.getElementById("idPunto").remove();
+                    }
+                }
+            } else {
+                console.log("primerita vez");
+            }
+
+            rejilla.style.width = (fil * tampunto + fil * 2) + "px";
+
             for (var i = 0; i < fil; i++) {
                 for (var j = 0; j < col; j++) {
                     var pixel = document.createElement("div");
-                    var idPunto = i + "x" + j;
+                    let idPunto = i + "x" + j;
                     pixel.setAttribute("id", idPunto);
-					pixel.style.width = tampunto+"px";
-					pixel.style.height = tampunto+"px";
+                    pixel.style.width = tampunto + "px";
+                    pixel.style.height = tampunto + "px";
                     pixel.className = "punto";
                     pixel.onclick = function () {
                         pintarPunto(this);
@@ -43,12 +56,25 @@
             }
 
         }
-		var colorActual = "black";
-        window.onload = function () {
-			var colores = ["red", "green", "blue", "yellow", "orange", "pink", "black", "white"];
-			initPaletaColor(colores);
-            crearRejilla(20, 20, 40);
+        var colorActual = "black";
+
+        async function inicio() {
+            document.getElementById("contenedor"), addEventListener("click", async function (e) {
+                //Boton plantarse
+                let botonPlantarse = e.target.closest("input[id=boton]");
+                if (botonPlantarse) {
+                    crearRejilla(document.getElementById("filas").value, document.getElementById("columnas").value, document.getElementById("tampunto").value);
+                }
+            });
         }
+
+        window.addEventListener("load", function () {
+            var colores = ["red", "green", "blue", "yellow", "orange", "pink", "black", "white"];
+            initPaletaColor(colores);
+            //Funcion inicio
+            inicio();
+
+        });
     </script>
     <style>
         div#rejilla {
@@ -59,54 +85,56 @@
             opacity: 0.8;
             width: 600px;
         }
-        
+
         .clearfix {
             overflow: hidden;
         }
-        
+
         div.punto {
             background: white;
-			border: 1px solid black;
+            border: 1px solid black;
             padding: 0;
             margin: 0;
             width: 10px;
             height: 10px;
             float: left;
         }
-		div#control{
-			margin: 5px auto;
-			padding: 2px;
-			width: 400px;
-			border: 1px solid black;
-		}
-		div#paleta{
-			margin: 20px auto;
-			border: 1px solid black;
-			width: 250px;
-			background: #eee;			
-		}
-		div.color{
-			width: 20px;
-			height: 20px;
-			margin: 5px;
-			float: left;
-		}
-		
 
+        div#control {
+            margin: 5px auto;
+            padding: 2px;
+            width: 400px;
+            border: 1px solid black;
+        }
+
+        div#paleta {
+            margin: 20px auto;
+            border: 1px solid black;
+            width: 250px;
+            background: #eee;
+        }
+
+        div.color {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            float: left;
+        }
     </style>
 </head>
 
 <body>
-	<div id="paleta" class="clearfix">
+    <div id="contenedor">
+        <div id="paleta" class="clearfix"></div>
 
-    </div>
-    <div id="control">
-    	Filas: <input type="number" id="filas" name="filas" size="2" min="5" max="100" value="20" >
-    	Columnas: <input type="number" id="columnas" name="columnas" size="2" min="5" max="100" value="20">
-    	Tam punto: <input type="number" id="tampunto" name="tampunto" size="2" min="1" max="100" value="10" >
-    	<input id="boton" type="button" value="aceptar">
-    </div>
-    <div id="rejilla" class="clearfix">
+        <div id="control">
+            Filas: <input type="number" id="filas" name="filas" size="2" min="5" max="100" value="20">
+            Columnas: <input type="number" id="columnas" name="columnas" size="2" min="5" max="100" value="20">
+            Tam punto: <input type="number" id="tampunto" name="tampunto" size="2" min="1" max="100" value="10">
+            <input type="submit" id="boton" value="Aceptar">
+        </div>
+
+        <div id="rejilla" class="clearfix"></div>
     </div>
 </body>
 
