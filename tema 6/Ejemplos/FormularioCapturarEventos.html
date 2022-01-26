@@ -17,6 +17,7 @@
     <textarea class="col-6 align-items-center" id="pantalla" rows="20" cols="10"></textarea>
     <input type="text" id="coordenadas">
   </div>
+  <div class="container" id="escritura"></div>
   <script>
     window.addEventListener("load", function () {
       document.getElementById("contenedor").addEventListener("click", mostrarAccion);
@@ -33,8 +34,13 @@
 
     function mostrarAccion(e) {
       console.log(e);
+      if (e == MouseEvent) {
+        console.log("hey");
+        document.getElementById("escritura").innerHTML = MouseEvent.button;
+      } else {
+        document.getElementById("escritura").innerHTML = String.fromCharCode(e.charCode);
+      }
 
-      document.getElementById("coordenadas").innerHTML = e;
     }
   </script>
 </body>

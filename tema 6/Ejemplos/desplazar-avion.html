@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container" id="caja">
+    <img src="avion.jpg" width="150px" height="300px">
+  </div>
+
+  <script>
+    function desplazaDiv(tecla) {
+      if (tecla.keyCode == 37) {
+        margenDerecho += 20;
+        caja.style.marginLeft = margenDerecho + "px";
+      } else if (tecla.keyCode == 39) {
+        margenDerecho -= 20;
+        caja.style.marginRight = margenDerecho + "px";
+      } else if (tecla.keyCode == 38) {
+        margenSuperior -= 20;
+        caja.style.marginTop = margenSuperior + "px";
+      } else if (tecla.keyCode == 40) {
+        margenSuperior += 20;
+        caja.style.marginTop = margenSuperior + "px";
+      }
+    }
+
+
+
+    window.addEventListener("load", function () {
+      margenDerecho = 0;
+      margenSuperior = 0;
+      var caja = document.getElementById("caja");
+      document.addEventListener('keyup', desplazaDiv, false);
+    });
+  </script>
+</body>
+
+</html>

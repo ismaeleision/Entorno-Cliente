@@ -1,3 +1,4 @@
+/*
 const display1 = document.querySelector(".display-1");
 const display2 = document.querySelector(".display-2"); 
 const numeros = document.querySelectorAll(".numero");
@@ -5,6 +6,21 @@ const operaciones = document.querySelectorAll(".operacion");
 const igual = document.querySelector(".igual");
 const borrarTodo = document.querySelector(".borrar_todo");
 const borraUltimo = document.querySelector(".borrar_sub_result");
+*/
+
+const display1 = document.getElementById("display-1");
+const display2= document.getElementById("display-2");
+const numero1 = document.getElementById("1");
+const numero2 = document.getElementById("2");
+const numero3 = document.getElementById("3");
+const numero4 = document.getElementById("4");
+const numero5 = document.getElementById("5");
+const numero6 = document.getElementById("6");
+const numero7 = document.getElementById("7");
+const numero8 = document.getElementById("8");
+const numero9 = document.getElementById("9");
+const numero0 = document.getElementById("0");
+const operacion = document.getElementById("/")
 
 let dis1Num = "";
 let dis2Num = "";

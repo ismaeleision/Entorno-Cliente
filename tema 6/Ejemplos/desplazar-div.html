@@ -20,21 +20,20 @@
         }
     </style>    
     <script>        
-        function desplazaDiv(tecla){
-            var teclaPulsada = tecla;            
-            if (teclaPulsada.keyCode == 37) {
+        function desplazaDiv(tecla){        
+            if (tecla.keyCode == 37) {
                 margenDerecho += 20;
                 caja.style.right = margenDerecho + "px";
-            } else if (teclaPulsada.keyCode == 39) {
+            } else if (tecla.keyCode == 39) {
                 margenDerecho -= 20;
                 caja.style.right = margenDerecho + "px";
-            } else if (teclaPulsada.keyCode == 38) {
+            } else if (tecla.keyCode == 38) {
                 margenSuperior -= 20;
                 caja.style.top = margenSuperior + "px";
-            } else if (teclaPulsada.keyCode == 40) {
+            } else if (tecla.keyCode == 40) {
                 margenSuperior += 20;
                 caja.style.top = margenSuperior + "px";
-            }            
+            }
         }
     
         window.onload = function(){
