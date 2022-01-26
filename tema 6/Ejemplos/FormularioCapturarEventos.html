@@ -13,21 +13,28 @@
 <body>
   <!--Formulario para capturar todos los eventos-->
 
-  <div class="container">
+  <div class="container" id="contenedor">
     <textarea class="col-6 align-items-center" id="pantalla" rows="20" cols="10"></textarea>
+    <input type="text" id="coordenadas">
   </div>
   <script>
     window.addEventListener("load", function () {
-      document.addEventListener("keydown", mostrarTecla);
-      document.addEventListener("click", mostrarBotonRaton);
+      document.getElementById("contenedor").addEventListener("click", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("dbclick", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("mousedown", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("mousedownmouseup", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("mouseover", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("mousemove", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("mouseout", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("keydown", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("keypress", mostrarAccion);
+      document.getElementById("contenedor").addEventListener("keyup", mostrarAccion);
     });
 
-    function mostrarTecla(e) {
+    function mostrarAccion(e) {
+      console.log(e);
 
-    }
-
-    function mostrarBotonRaton(e) {
-
+      document.getElementById("coordenadas").innerHTML = e;
     }
   </script>
 </body>
