@@ -27,15 +27,12 @@
             rejilla.innerHTML = "";
             var con = 0;
             if (con > 0) {
-                console.log("segundita vez puto");
                 for (var i = 0; i < fil; i++) {
                     for (var j = 0; j < col; j++) {
                         let idPunto = i + "x" + j;
                         document.getElementById("idPunto").remove();
                     }
                 }
-            } else {
-                console.log("primerita vez");
             }
 
             rejilla.style.width = (fil * tampunto + fil * 2) + "px";
