@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Examen 11 feb. Eventos en Javascript</title>
+	<meta name="author" content="Amador Campos Aznar" />
+	<script type="text/javascript" src="ejercicio2.js"></script>
+	<style>
+		#nave {
+			position: absolute;
+			transition: left 0.3s linear;
+			top: 200px;
+			left: 400px;
+		}
+		#disparo {
+			position: absolute;
+			transition: top 1s ease-in, left 0.3s linear;
+			top: 200px;
+			left: 470px;
+		}
+	</style>
+	
+</head>
+<body>
+	<p><img id="nave" src="./imagenes/nave.png" alt="nave" width="150" height="150"> </p>
+	<p><img id="disparo" src="./imagenes/laser.png" alt="disparo" width="10" height="10"> </p>
+	<p>Pulse izquierda y derecha; Intro para disparar</p>
+</body>
+</html>
