@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--3. Modifica el ejercicio 1, añade dos botones sobre el div.
+Cada vez que se pulse sobre uno de ellos añadirá 100 px al ancho y alto y cuando se
+pulse en el otro reducirá dichas dimensiones en 50px.
+Utiliza primero css() y luego animate.
+Se observa que mediante css() la acción acaba al instante mientras que con animate hay
+una transición en el proceso-->
+</head>
+
+<body>
+  <button type="button" id="mas">Boton</button>
+  <button type="button" id="menos">Boton</button>
+
+  <div id="caja" style="background-color: green; width:800px; height:70px; position:absolute;">
+    <p id="texto"></p>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("div").dblclick(function () {
+        if ($("#caja").width() == 800) {
+          $("#caja").animate({
+            width: '250',
+            height: '250'
+          });
+          //introduce el texto dentro de los parentesis de html en el id texto
+          $("#texto").html($("#caja").width() + "X" + $("#caja").height());
+        } else {
+          $("#caja").animate({
+            width: '800',
+            height: '70'
+          });
+          $("#texto").html($("#caja").width() + "X" + $("#caja").height());
+        }
+      });
+      $("#mas").click(function () {
+        
+      });
+    });
+  </script>
+</body>
+
+</html>

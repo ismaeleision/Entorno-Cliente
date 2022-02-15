@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--2. Crea un script que añada debajo del div un botón que al pulsar en él, mueva
+el div 100px a la izquierda y lo haga más pequeño 150 px. 
+El div estará inicialmente ubicado en las coordenadas(0,100)-->
+</head>
+
+<body>
+  <button type="button" id="boton">Boton</button>
+
+  <div id="caja" style="background-color: green; width:250px; height:250px; position:absolute;">
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("#boton").click(function () {
+        $("#caja").animate({
+          left: '100px',
+          height: '150px',
+          width: '150px'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
