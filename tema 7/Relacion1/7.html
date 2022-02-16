@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--7. Desarrolla un script que al pulsar en un botón se mueva un div 100 px a la
+derecha y a continuación, aumente el tamaño de la letra de su contenido a 30px.
+Utiliza animate() y css()-->
+</head>
+
+<body>
+  <input type="button" value="Mover" id="boton">
+  <div id="pieza" style="background-color: greenyellow; width: 100px; height: 100px; position: absolute;">Una Pieza</div>
+
+  <script>
+    $(document).ready(function () {
+      $('#boton').click(function () {
+        $('#pieza').animate({ right: '100px' }, function () {
+          $('#pieza').css("fontSize", 75);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

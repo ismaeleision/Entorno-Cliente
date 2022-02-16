@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!--3. Modifica el ejercicio 1, añade dos botones sobre el div.
-Cada vez que se pulse sobre uno de ellos añadirá 100 px al ancho y alto y cuando se
-pulse en el otro reducirá dichas dimensiones en 50px.
-Utiliza primero css() y luego animate.
-Se observa que mediante css() la acción acaba al instante mientras que con animate hay
-una transición en el proceso-->
+  <!--4. Modifica el ejercicio 3 para que la cantidad de píxeles que se amplia y reduce
+el div pueda ser indicado por el usuario-->
 </head>
 
 <body>
   <button type="button" id="mas">+ Mas</button>
   <button type="button" id="menos">- Menos</button>
+  <label for="alto">Alto</label>
+  <input type="text" id="alto">
+  <label for="ancho">Ancho</label>
+  <input type="text" id="ancho">
 
   <div id="caja" style="background-color: green; width:800px; height:70px; position:absolute;">
     <p id="texto"></p>
@@ -31,6 +31,13 @@ una transición en el proceso-->
     });
     $("#menos").click(function () {
       $("#caja").css({ 'width': '-=50', 'height': '-=50' });
+    });
+
+    $("#alto").focusout(function () {
+      $("#caja").css({ 'height': $('#alto').val() });
+    });
+    $("#ancho").focusout(function () {
+      $("#caja").css({ 'width': $('#ancho').val() });
     });
   </script>
 </body>
