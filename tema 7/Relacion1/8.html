@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio8</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style type="text/css">
+    #cajaPrincipal {
+      margin: auto;
+      width: 400px;
+      height: 400px;
+      border: 10px solid #000000;
+    }
+
+    #pieza {
+      width: 50px;
+      height: 50px;
+      background-color: #ff0000;
+    }
+
+    #cajaBotones {
+      margin-top: 15px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #cajaBotones>input {
+      margin: 0 3px;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    var derecha = false;
+    var izquierda = false;
+    var arriba = false;
+    var abajo = false;
+
+    $('document').ready(function () {
+      $('body').append('<div id="cajaPrincipal"><div id="pieza"></div></div>' +
+        '<div id="cajaBotones">' +
+        '<input type="button" value="Empezar" id="empezar">' +
+        '<input type="button" value="Saltar Animacion" id="saltar">' +
+        '<input type="button" value="Parar Todo" id="parar">' +
+        '<input type="button" value="Parar y Saltar" id="pararSaltar">' +
+        '<input type="button" value="Parar y Detener" id="pararDetener">' +
+        '<input type="button" value="Ir al final" id="inicio">' +
+        '</div>');
+      $('#empezar').click(mover);
+      $("#pararSaltar").click(pararSaltar);
+    });
+
+    function mover() {
+      moverDerecha();
+      moverAbajo();
+      moverIzquierda();
+      moverArriba();
+    }
+
+    function pararSaltar() {
+      $('#pieza').stop();
+    }
+
+    function moverDerecha() {
+      derecha = true;
+      $('#pieza').animate({ 'margin-left': ($('#cajaPrincipal').width() - $('#pieza').width()) + "px" }, 3000);
+      derecha = false;
+    }
+
+    function moverAbajo() {
+      abajo = true;
+      $('#pieza').animate({ 'margin-top': ($('#cajaPrincipal').width() - $('#pieza').width()) + "px" });
+      abajo = false;
+    }
+    function moverIzquierda() {
+      izquierda = true;
+      $('#pieza').animate({ 'margin-left': "0px" });
+      izquierda = false;
+    }
+    function moverArriba() {
+      arriba = true;
+      $('#pieza').animate({ 'margin-top': "0px" });
+      arriba = false;
+    }
+
+  </script>
+</body>
+
+</html>
