@@ -19,10 +19,16 @@
 </head>
 
 <body>
-  <header class="d-flex flex-wrap align-items-center justify-content-center py-3 m-3 border-bottom">
-    <ul class="nav col-4 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-      <li><a href="./pricing.html" class="nav-link px-2 link-dark">Pricing</a></li>
-    </ul>
-  </header>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-3">
+        <img src="./img/logo.png">
+      </div>
+      <div class="col-7 d-flex flex-wrap align-items-center justify-content-center py-3 m-3 border-bottom">
+        <ul class="nav col-4 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="./index.php" class="nav-link px-2 link-dark">Inicio</a></li>
+          <li><a href="./contenido.php" class="nav-link px-2 link-dark ms-5">Contenido</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
