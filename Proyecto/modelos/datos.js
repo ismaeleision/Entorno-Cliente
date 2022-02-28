@@ -29,4 +29,9 @@ var motos = [
     precio: 174.9,
     imagen: 'img/carretera.jpg',
   },
+  {
+    nombre: 'Eco Thumbshit',
+    precio: 174.9,
+    imagen: 'img/triciclo.jpg',
+  },
 ];
