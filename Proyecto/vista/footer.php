@@ -20,6 +20,7 @@
     </div>
   </div>
 </div>
+<script src="../modelo/datos.js"></script>
 </body>
 
 </html>

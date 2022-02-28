@@ -27,7 +27,8 @@
       <div class="col-7 d-flex flex-wrap align-items-center justify-content-center py-3 m-3 border-bottom">
         <ul class="nav col-4 col-md-auto mb-2 justify-content-center mb-md-0">
           <li><a href="./index.php" class="nav-link px-2 link-dark">Inicio</a></li>
-          <li><a href="./contenido.php" class="nav-link px-2 link-dark ms-5">Contenido</a></li>
+          <li><a href="./contenido.php" class="nav-link px-2 link-dark ms-5">Servicios</a></li>
+          <li><a href="./muestrario.php" class="nav-link px-2 link-dark ms-5">Muestrario</a></li>
         </ul>
       </div>
     </div>
