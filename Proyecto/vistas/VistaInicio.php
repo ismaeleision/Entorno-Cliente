@@ -8,22 +8,17 @@ class VistaInicio
 
   public function render()
   {
-    $vistaC = new VistaCabecera();
+    include_once "cabecera.php";
+    echo '<div class="container" id="contenedor">';
+    echo '<div class="row">';
+    echo  '<div class="col-8">';
 
-    $this->html .= $vistaC->render();
-    $this->html .=  '
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-
-        </div>
-        <div class="col-4">
-          <img src="./vistas/img/procesion.jpg" width="400px" height="300px">
-        </div>
-      </div>
-    </div>';
-    $vistaP = new VistaPie();
-    $this->html .= $vistaP->render();
-    echo $this->html;
+    echo   '</div>';
+    echo   '<div class="col-4">';
+    echo    '<img src="./vistas/img/procesion.jpg" width="400px" height="300px">';
+    echo   '</div>';
+    echo   '</div>';
+    echo '</div>';
+    include_once "pie.php";
   }
 }

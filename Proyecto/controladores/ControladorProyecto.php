@@ -7,11 +7,15 @@ class ControladorProyecto
     $vistaL->render();
   }
 
-  public static function mostrarContenido()
+  public static function mostrarServicios()
   {
+    $vistaL = new VistaContenido();
+    $vistaL->render();
   }
 
   public static function mostrarMuestrario()
   {
+    $vistaL = new VistaMuestrario();
+    $vistaL->render();
   }
 }

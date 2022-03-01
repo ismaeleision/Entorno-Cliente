@@ -7,31 +7,31 @@ var motos = [
   {
     nombre: 'Harley Davison',
     precio: 149.0,
-    imagen: 'img/harley.jpg',
+    imagen: 'vistas/img/harley.jpg',
   },
   {
     nombre: 'Yamaha',
     precio: 149.0,
-    imagen: 'img/yamaha.jpg',
+    imagen: 'vistas/img/yamaha.jpg',
   },
   {
     nombre: 'Custom',
     precio: 1499.0,
-    imagen: 'img/custom.jpg',
+    imagen: 'vistas/img/custom.jpg',
   },
   {
     nombre: 'Cross',
     precio: 399.0,
-    imagen: 'img/cross.jpg',
+    imagen: 'vistas/img/cross.jpg',
   },
   {
     nombre: 'Carretera',
     precio: 174.9,
-    imagen: 'img/carretera.jpg',
+    imagen: 'vistas/img/carretera.jpg',
   },
   {
     nombre: 'Eco Thumbshit',
     precio: 174.9,
-    imagen: 'img/triciclo.jpg',
+    imagen: 'vistas/img/triciclo.jpg',
   },
 ];

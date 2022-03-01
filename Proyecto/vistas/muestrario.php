@@ -7,8 +7,6 @@
       <p>{{moto.nombre}}</p>
       <p>{{moto.precio}}</p>
     </div>
-
   </div>
-
 </div>
 <?= include "footer.php" ?>
