@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app class="ng-scope">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Cuestionario con AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+  <div id="test" ng-controller="TestController" class="ng-scope">
+    <h1>Ejemplo de cuestionario utilizando AngularJS</h1>
+    <img src="img/AngularJS-logo.png" alt="AngularJS" class="logoAngularJS">
+    <div class="questions">
+      <!-- ngRepeat: question in questions -->
+      <div class="question ng-scope" ng-repeat="question in questions">
+        <p class="status-">�C�mo declaramos en Java un atributo de una clase que solo pueda ser accedido desde la propia clase?</p>
+        <!-- ngRepeat: answer in question.answers -->
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="1" name="question-1" id="answer-1-1" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-1-1" class="ng-binding">Con "private"</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="2" name="question-1" id="answer-1-2" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-1-2" class="ng-binding">Con "public"</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="3" name="question-1" id="answer-1-3" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-1-3" class="ng-binding">Con mucho cari�o</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="4" name="question-1" id="answer-1-4" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-1-4" class="ng-binding">�Eso no se puede hacer!</label>
+        </div>
+      </div>
+      <div class="question ng-scope" ng-repeat="question in questions">
+        <p class="status-">�Qu� significan las siglas del patr�n MVC?</p>
+        <!-- ngRepeat: answer in question.answers -->
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="1" name="question-2" id="answer-2-1" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-2-1" class="ng-binding">Modelo Vista Concurrente</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="2" name="question-2" id="answer-2-2" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-2-2" class="ng-binding">Modelo Vista Controlador</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="3" name="question-2" id="answer-2-3" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-2-3" class="ng-binding">Me Voy de Casa</label>
+        </div>
+      </div>
+      <div class="question ng-scope" ng-repeat="question in questions">
+        <p class="status-">�Qui�n es el mejor futbolista del mundo?</p>
+        <!-- ngRepeat: answer in question.answers -->
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="1" name="question-3" id="answer-3-1" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-3-1" class="ng-binding">Leo Messi (F.C. Barcelona)</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="2" name="question-3" id="answer-3-2" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-3-2" class="ng-binding">Cristiano Ronaldo (Real Madrid C.F.)</label>
+        </div>
+        <div class="answers ng-scope" ng-repeat="answer in question.answers">
+          <input type="radio" ng-model="question.userAnswer" value="3" name="question-3" id="answer-3-3" ng-change="validate(question)"
+            class="ng-pristine ng-valid">
+          <label for="answer-3-3" class="ng-binding">Radamel Falcao (Atl�tico de Madrid)</label>
+        </div>
+      </div>
+    </div>
+    <div class="userStatus ">
+      <span class="ng-binding">Has acertado 0 de 3</span>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

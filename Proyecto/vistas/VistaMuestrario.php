@@ -13,7 +13,7 @@ class VistaMuestrario
     echo '<div class="container" ng-app="miApp">';
     echo ' <h6 class="fst-italic m-4">*Precios orientativos. Podriamos no poseer el modelo que se muestra, lamentamos las molestias.</h6>';
     echo '  <div class="row" ng-controller="controlador">';
-    echo '    <div class="col-4" ng-repeat="moto in motos">';
+    echo '    <div class="col-8 col-lg-4 ms-5 mt-2" ng-repeat="moto in motos">';
     echo '      <img src="{{ moto.imagen}}">';
     echo '      <p>{{moto.nombre}}</p>';
     echo '      <p>{{moto.precio}}</p>';

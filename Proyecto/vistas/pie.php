@@ -1,5 +1,5 @@
 <footer class="container-fluid p-3 mt-4 bg-dark text-secondary">
-  <ul class="nav col-4 col-md-auto mb-2 justify-content-center mb-md-0">
+  <ul class="nav mb-2 justify-content-center mb-md-0">
     <li>@2022 Copyright Misco Jones S.A.</li>
   </ul>
   <div class="row fst-italic">

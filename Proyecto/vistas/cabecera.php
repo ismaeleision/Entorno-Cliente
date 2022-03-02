@@ -21,12 +21,12 @@
 <body>
   <header class="container mt-4">
     <div class="row">
-      <div class="col-3">
-        <img src="./vistas/img/logo.png">
+      <div class="col-6">
+        <img src="./vistas/img/logo.png" class="img-fluid w-auto">
       </div>
-      <div class="col-7 d-flex flex-wrap align-items-center justify-content-center py-3 m-3 border-bottom">
-        <ul class="nav col-4 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="enrutador.php?accion=inicio" class=" btn nav-link px-2 link-dark" id="inicio">Inicio</a></li>
+      <div class="col-5 d-flex flex-wrap align-items-center justify-content-center py-3 m-3 border-bottom">
+        <ul class="nav  mb-2 justify-content-center">
+          <li><a href="enrutador.php?accion=inicio" class=" btn nav-link px-2 link-dark ms-5" id="inicio">Inicio</a></li>
           <li><a href="enrutador.php?accion=servicios" class=" btn nav-link px-2 link-dark ms-5" id="servicios">Servicios</a></li>
           <li><a href="enrutador.php?accion=muestrario" class=" btn nav-link px-2 link-dark ms-5" id="muestrario">Muestrario</a></li>
         </ul>
