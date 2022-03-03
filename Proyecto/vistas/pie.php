@@ -1,4 +1,4 @@
-<footer class="container-fluid p-3 mt-4 bg-dark text-secondary">
+<footer class="container-fluid p-3 mt-4 bg-dark text-secondary bg-gradient">
   <ul class="nav mb-2 justify-content-center mb-md-0">
     <li>@2022 Copyright Misco Jones S.A.</li>
   </ul>
@@ -21,11 +21,12 @@
   </div>
   </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <!--AJAX-->
+<!--
 <script type="text/javascript">
-  /*
+  
   window.addEventListener("load", inicio);
 
   //Funcion inicio
@@ -62,8 +63,8 @@
       document.getElementById("contenedor").innerHTML = await response.text();
     });
   }
-  */
 </script>
+-->
 </body>
 
 </html>

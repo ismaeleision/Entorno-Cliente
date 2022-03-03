@@ -6,12 +6,12 @@ miApp.controller('controlador', function ($scope) {
 var motos = [
   {
     nombre: 'Harley Davison',
-    precio: 149.0,
+    precio: 1490.0,
     imagen: 'vistas/img/harley.jpg',
   },
   {
     nombre: 'Yamaha',
-    precio: 149.0,
+    precio: 1750.0,
     imagen: 'vistas/img/yamaha.jpg',
   },
   {
@@ -21,17 +21,17 @@ var motos = [
   },
   {
     nombre: 'Cross',
-    precio: 399.0,
+    precio: 3099.0,
     imagen: 'vistas/img/cross.jpg',
   },
   {
     nombre: 'Carretera',
-    precio: 174.9,
+    precio: 1794.9,
     imagen: 'vistas/img/carretera.jpg',
   },
   {
     nombre: 'Eco Thumbshit',
-    precio: 174.9,
+    precio: 17599.9,
     imagen: 'vistas/img/triciclo.jpg',
   },
 ];
