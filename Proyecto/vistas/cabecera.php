@@ -27,13 +27,25 @@
       <div class="collapse navbar-collapse bg-secondary bg-gradient w-auto bg-opacity-75 rounded-3 " id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0 p-3">
           <li class="nav-item">
-            <a class="nav-link text-white ms-5" aria-current="page" href="enrutador.php?accion=inicio">Inicio</a>
+            <a class="nav-link ms-5 <?php if ($_REQUEST['accion'] == "inicio") {
+                                      echo 'fw-bold text-decoration-underline text-dark';
+                                    } else {
+                                      echo 'text-white';
+                                    } ?>" href="enrutador.php?accion=inicio">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white ms-5" href="enrutador.php?accion=servicios">Servicios</a>
+            <a class="nav-link ms-5 <?php if ($_REQUEST['accion'] == "servicios") {
+                                      echo 'fw-bold text-decoration-underline text-dark';
+                                    } else {
+                                      echo 'text-white';
+                                    } ?>" href="enrutador.php?accion=servicios">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white ms-5" href="enrutador.php?accion=muestrario">Muestrario</a>
+            <a class="nav-link ms-5 <?php if ($_REQUEST['accion'] == "muestrario") {
+                                      echo 'fw-bold text-decoration-underline text-dark';
+                                    } else {
+                                      echo 'text-white';
+                                    } ?>" href="enrutador.php?accion=muestrario">Muestrario</a>
           </li>
         </ul>
       </div>
