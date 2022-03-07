@@ -4,14 +4,16 @@ class VistaMuestrario
   public function render()
   {
     include_once "cabecera.php"; ?>
+
     <div ng-app="miApp">
+
       <div class="container" ng-controller="controlador">
         <div class="row">
           <div class="col-8">
             <h6 class="fst-italic m-4">*Precios orientativos. Podriamos no poseer el modelo que se muestra, lamentamos las molestias.</h6>
           </div>
           <div class="col-2">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" ng-model="nombre">
+            <input class="form-control" type="search" placeholder="Buscador" aria-label="Search" ng-model="nombre">
           </div>
         </div>
         <div class="row">
